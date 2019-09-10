@@ -1,0 +1,74 @@
+<img src="assets/logo.png">                <p class="p1">connexion</p> <p class="p2">inscrivez-vous</p>
+<div>
+   <button routerLink="/accueil" class="btn btn-primary" routerLinkActive="active">accueil</button>
+   <button routerLink="/ajouterService" class="btn btn-primary"routerLinkActive="active">ajouter un service</button>
+   <button routerLink="/demanderService" class="btn btn-primary"> demader un service</button>
+   <button routerLink ="/servicesDisponibles"class="btn btn-primary"> services disponibles</button>
+   <button routerLink="/servicesDemander"class="btn btn-primary"> services demandés</button>
+   
+</div>
+<div class="card">
+   <div class="card-body">
+     <form [formGroup]="angForm" novalidate>
+       <div class="form-group">
+         <label class="col-md-4">ville de residence</label>
+         <input type="text" class="form-control" formControlName="ville" #ville />
+       </div>
+       <div *ngIf="angForm.controls['ville'].invalid && (angForm.controls['ville'].dirty || angForm.controls['ville'].touched)" class="alert alert-danger">
+         <div *ngIf="angForm.controls['ville'].errors.required">
+          Le nom de la ville est requis
+         </div>
+       </div>
+       <div class="form-group">
+        <label class="col-md-4">Trance d'Age</label>
+        <input type="text" class="form-control" formControlName="td" #ville />
+      </div>
+      <div *ngIf="angForm.controls['td'].invalid && (angForm.controls['td'].dirty || angForm.controls['td'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['td'].errors.required">
+          Person Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Genre</label>
+        <input type="text" class="form-control" formControlName="gr" #ville />
+      </div>
+      <div *ngIf="angForm.controls['gr'].invalid && (angForm.controls['gr'].dirty || angForm.controls['gr'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['gr'].errors.required">
+          Person Name is required.
+        </div>
+      </div>
+       <div class="form-group">
+         <label class="col-md-4">fonctions</label>
+         <input type="text" class="form-control" formControlName="fonction" #fonction />
+       </div>
+       <div *ngIf="angForm.controls['fonction'].invalid && (angForm.controls['fonction'].dirty || angForm.controls['business_name'].touched)" class="alert alert-danger">
+         <div *ngIf="angForm.controls['fonction'].errors.required">
+           Person Business is required.
+         </div>
+       </div>
+       <div class="form-group">
+        <label class="col-md-4">Nombre d'Heure</label>
+        <input type="text" class="form-control" formControlName="nd" #fonction />
+      </div>
+      <div *ngIf="angForm.controls['nd'].invalid && (angForm.controls['nd'].dirty || angForm.controls['nd'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['nd'].errors.required">
+          Person Business is required.
+        </div>
+      </div>
+       <div class="form-group">
+         <label class="col-md-4">Nature du temps déposé </label>
+         <input type="text" class="form-control" formControlName="NatureTemps" #NatureTemps/>
+       </div>
+       <div *ngIf="angForm.controls['NatureTemps'].invalid && (angForm.controls['NatureTemps'].dirty || angForm.controls['NatureTemps'].touched)" class="alert alert-danger">
+         <div *ngIf="angForm.controls['NatureTemps'].errors.required">
+           Business GST Number is required.
+         </div>
+       </div>
+       <div class="form-group">
+         <button type="submit" (click)="addBusiness(ville.value, fonction.value, NatureTemps.value)"
+         [disabled]="angForm.pristine || angForm.invalid" 
+         class="btn btn-primary">ajouter</button>
+       </div>
+     </form>
+   </div>
+ </div>
