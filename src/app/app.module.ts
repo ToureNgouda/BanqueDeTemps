@@ -11,6 +11,7 @@ import { AccueilComponent } from './accueil/accueil.component';
 import{ReactiveFormsModule}from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { environment } from '../environments/environment';
     DemanderServiceComponent,
     ServiceDisponibleComponent,
     ServiceDemanderComponent,
-    AccueilComponent
+    AccueilComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

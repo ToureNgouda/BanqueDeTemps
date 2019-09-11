@@ -1,18 +1,3 @@
-<div>
-   <img src="assets/logo.png">  
-</div>
-             
-<div>
-   <button routerLink="/accueil"class="btn btn-primary" routerLinkActive="active">accueil</button>
-   <button routerLink="/ajouterService" class="btn btn-primary"routerLinkActive="active">ajouter un service</button>
-   <button routerLink="/demanderService" class="btn btn-primary">demader un service</button>
-   <button routerLink ="/servicesDisponibles"class="btn btn-primary">services disponibles</button>
-   <button routerLink="/servicesDemander"class="btn btn-primary"> services demandés</button>
-   
-</div>
-<img src="assets/sabar.jpg" width="2000 " height="500">
-<p class="p1" >
-   La Banque de Temps est un système convivial d’entraide basé sur l’échange de services et de savoir-faire. Partant du principe que chacun d’entre nous possède un savoir à partager, la Banque de Temps connecte les besoins existants des uns avec les ressources disponibles des autres, tout en se passant d’argent classique. Le mode de fonctionnement est simple : une heure de temps donnée autour de vous équivaut à une heure de temps à utiliser grâce à un inventaire de services proposés par les membres.
-
-</p>
-<app-ajouter-service></app-ajouter-service>
+<app-header></app-header>
+<!-- <app-ajouter-service></app-ajouter-service> -->
+<router-outlet></router-outlet>
