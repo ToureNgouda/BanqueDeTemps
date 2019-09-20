@@ -11,4 +11,8 @@
 
 .menu button {
     border-radius: 0 !important;
+
+}
+.header button {
+    background-color: #000;
 }

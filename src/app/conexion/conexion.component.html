@@ -1,0 +1,35 @@
+<p></p> <p>
+
+</p>
+<div>
+<div class="card ajout">
+   <div class="card-body">
+            <h1>Connetez-vous</h1>
+        <form [formGroup]="angForm" novalidate>
+       <div class="form-group">
+         <label class="col-md-4">email</label>
+         <input type="text" class="form-control" formControlName="email"   [(ngModel)]="user.email" />
+       </div>
+       <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+         <div *ngIf="angForm.controls['email'].errors.required">
+          l' email est requis
+         </div>
+       </div>
+       <div class="form-group">
+        <label class="col-md-4">mot de passe</label>
+        <input type="password" class="form-control" formControlName="passWord"   [(ngModel)]="user.passWord"/>
+      </div>
+      <div *ngIf="angForm.controls['passWord'].invalid && (angForm.controls['passWord'].dirty || angForm.controls['passWord'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['passWord'].errors.required">
+          le mot de passe est requis'.
+        </div>
+      </div>
+       <div class="form-group">
+         <button type="submit" (click)="createConnexion()"
+         [disabled]="angForm.pristine || angForm.invalid" 
+         class="btn btn-primary">ajouter</button>
+       </div>
+     </form>
+   </div>
+ </div>
+</div>

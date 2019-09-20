@@ -1,0 +1,28 @@
+<p></p>
+<p></p>
+<div class="container">
+        <div class="login-form col-md-4 offset-md-4">
+            <h1 class="title">Inscrivez-vous</h1>
+            <form [formGroup]="angForm" novalidate>
+                <div class="form-group">
+                    <label>Prenom et nom</label>
+                    <input type="text" formControlName='nom'class="form-control" [(ngModel)]="user.nom"> 
+                </div>
+                <div class="form-group">
+                    <label>email</label>
+                    <input type="email" formControlName='email' class="form-control" [(ngModel)]="user.email"> 
+                </div>
+                <div class="form-group">
+                        <label>mot de passe </label>
+                        <input type="password" formControlName='passWord' class="form-control" [(ngModel)]="user.passWord">
+                </div>
+                <div class="form-group">
+                    <label>confirmez votre mot de passe </label>
+                    <input type="password" formControlName='comfirmePassWord' class="form-control" [(ngModel)]="user.confirmePassWord">
+            </div>
+
+                <button (click)="addUser()" [disabled]="!angForm.valid"   class="btn btn-primary btn-block" >valider</button>
+            </form>
+        </div>
+    
+    </div>

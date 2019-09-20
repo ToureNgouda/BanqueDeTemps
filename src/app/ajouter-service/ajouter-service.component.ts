@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
+import{AjouterserviceService} from '../ajouterservice.service'
 
 @Component({
   selector: 'app-ajouter-service',
@@ -8,7 +9,7 @@ import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 })
 export class AjouterServiceComponent implements OnInit {
   angForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private as: AjouterserviceService) {
     this.createForm();
    }
    createForm() {
@@ -18,9 +19,13 @@ export class AjouterServiceComponent implements OnInit {
       gr: ['', Validators.required ],
       fonction: ['', Validators.required ],
       nd: ['', Validators.required ],
-      NatureTemps: ['', Validators.required ]
+      natureTemps: ['', Validators.required ]
     });
   }
+  addservice(ville, td, gr,fonction, nd, natureTemps) {
+    this.as.addservice(ville, td, gr, fonction, nd,natureTemps);
+  }
+
 
 
   ngOnInit() {

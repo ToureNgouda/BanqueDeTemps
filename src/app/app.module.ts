@@ -8,10 +8,13 @@ import { DemanderServiceComponent } from './demander-service/demander-service.co
 import { ServiceDisponibleComponent } from './service-disponible/service-disponible.component';
 import { ServiceDemanderComponent } from './service-demander/service-demander.component';
 import { AccueilComponent } from './accueil/accueil.component';
-import{ReactiveFormsModule}from '@angular/forms';
+import{ReactiveFormsModule, FormGroup}from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './header/header.component';
+import { ConexionComponent } from './conexion/conexion.component';
+import { InscriptionComponent } from './inscription/inscription.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,12 +25,14 @@ import { HeaderComponent } from './header/header.component';
     ServiceDisponibleComponent,
     ServiceDemanderComponent,
     AccueilComponent,
-    HeaderComponent
+    HeaderComponent,
+    ConexionComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule,HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

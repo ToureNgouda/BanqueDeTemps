@@ -6,6 +6,8 @@ import { DemanderServiceComponent } from './demander-service/demander-service.co
 import { ServiceDisponibleComponent } from './service-disponible/service-disponible.component';
 import { ServiceDemanderComponent } from './service-demander/service-demander.component';
 import{Routes,RouterModule} from'@angular/router';
+import { ConexionComponent } from './conexion/conexion.component';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 const appRoutes: Routes=[
   {path:'accueil',component:AccueilComponent},
@@ -13,7 +15,9 @@ const appRoutes: Routes=[
   {path:'demanderService',component:DemanderServiceComponent},
   {path:'servicesDisponibles',component:ServiceDisponibleComponent},
   {path:'servicesDemander',component:ServiceDemanderComponent},
-  {path:'',redirectTo:'/acueil',pathMatch:'full'}
+  {path:'conexion',component:ConexionComponent},
+  {path:'inscription',component:InscriptionComponent},
+  {path:'',redirectTo:'/accueil',pathMatch:'full'}
 ]
 
 
