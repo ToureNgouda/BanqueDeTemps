@@ -1,18 +1,34 @@
 .header{
     display: flex;
     justify-content: space-between;
-    background-color: #000
+    background-color: #000;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 200px;
 }
 
 .menu{
-    width: 100%;
+    margin-top:50px;
 
 }
-
+.auth{
+    margin-top: 50px;
+    margin-left:-20px;
+}
+img{
+    height: 40px;
+    margin-top: 50px;
+}
 .menu button {
     border-radius: 0 !important;
 
 }
 .header button {
     background-color: #000;
+}
+.btn{
+    color: white;
+}
+.connect{
+    color: blue;
 }

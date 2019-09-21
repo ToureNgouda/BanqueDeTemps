@@ -1,20 +1,18 @@
 <div class="header">
     <div>
-        <img src="assets/logo.png">
+        <a routerLink="/accueil">
+            <img src="assets/logo.png" >
+        </a>
+        
     </div>
-    <div class="auth">
-        <button routerLink="/conexion" class="btn btn-primary" routerLinkActive="active">connexion</button>
-        <button routerLink="/inscription" class="btn btn-primary" routerLinkActive="active">inscription</button>
+    <div class="menu col-lg-8">
+        <!--button routerLink="/accueil" class="btn" routerLinkActive="active">accueil</button-->
+        <button routerLink="/ajouterService" class="btn" routerLinkActive="active">Ajouter un service</button>
+        <button routerLink="/demanderService" class="btn ">Demander un service</button>
+        <button routerLink="/servicesDisponibles" class="btn ">Services disponibles</button>
+        <button routerLink="/servicesDemander" class="btn">Services demandes</button>
     </div>
-</div>
-
-
-
-<div class="menu">
-    <button routerLink="/accueil" class="btn btn-primary" routerLinkActive="active">accueil</button>
-    <button routerLink="/ajouterService" class="btn btn-primary" routerLinkActive="active">ajouter un service</button>
-    <button routerLink="/demanderService" class="btn btn-primary">demader un service</button>
-    <button routerLink="/servicesDisponibles" class="btn btn-primary">services disponibles</button>
-    <button routerLink="/servicesDemander" class="btn btn-primary"> services demandés</button>
-
+    <div class="auth col-lg-3">
+        <button routerLink="/conexion" class="btn connect" routerLinkActive="active">connexion</button>
+    </div>
 </div>

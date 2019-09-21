@@ -4,3 +4,40 @@
     color:black;
     font-size: 30px;
     }
+.container{
+    height: 400px;
+    padding-top: 200px;
+    text-align: center;
+    color: white;
+    background-image:url("../../assets/sabar.jpg");
+}
+.btn{
+    border-radius: 15px;
+}
+.text{
+    color: black;
+    margin-left: 200px;
+    padding-top: 30px;
+}
+.info{
+    margin-top: 30px;
+    background-color: white;
+    
+}
+.basPage{
+    background-color:ghostwhite;
+    height: 200px;
+    margin-top: 0px;
+}
+.col-lg-3{
+    margin-top: -80px;
+    color: black;
+    margin-left: 70px;
+}
+.pf{
+    color: blue;
+    margin-top: 15px;
+}
+img{
+    margin-top: -100px;  
+}

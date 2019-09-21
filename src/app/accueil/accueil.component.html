@@ -1,5 +1,34 @@
-<img src="assets/sabar.jpg" width="2000 " height="500">
-<p class="p1" >
-   La Banque de Temps est un système convivial d’entraide basé sur l’échange de services et de savoir-faire. Partant du principe que chacun d’entre nous possède un savoir à partager, la Banque de Temps connecte les besoins existants des uns avec les ressources disponibles des autres, tout en se passant d’argent classique. Le mode de fonctionnement est simple : une heure de temps donnée autour de vous équivaut à une heure de temps à utiliser grâce à un inventaire de services proposés par les membres.
-
-</p>
+<div class="entete container">
+    <h1>Echanges de services et de savoir-faire</h1>
+    <p>Consultez les services recherchés et proposés</p>
+    <button class="btn btn-primary" routerLink="/inscription" *ngIf="!inscriptionService.isConnect">Inscrivez-vous</button>
+    <div class="row info">
+        <p class="text col-md-9">
+            La Banque de Temps est un système convivial d’entraide basé sur l’échange de services et de savoir-faire. <br>
+             Partant du principe que chacun d’entre nous possède un savoir à partager, la
+            Banque de Temps connecte<br> Les besoins existants des uns avec les ressources disponibles des
+            autres, tout en se passant d’argent classique.<br> Le mode de fonctionnement est simple : une heure
+            de temps donnée autour de vous équivaut à une heure de temps à utiliser grâce à un inventaire
+            de services proposés par les membres.
+            Vous pouvez découvrir la plateforme et consulter les services recherchés et proposés sans
+            inscription préalable.
+        </p>
+    </div>
+    <div class="row plate">
+        <div class="basPage col-lg-12">
+            <p class="pf">Découvrir la plateforme</p>
+        </div>
+        <div class="col-lg-3">
+                <img src="assets/profil.jpg" alt="" height="70" width="70" >
+           <p> Ajouter ou demander un service</p>
+        </div>
+        <div class="col-lg-3">
+                <img src="assets/avatar.jpg" alt="" height="70" width="70" >
+             <p> Echanger vos services et savoir-faire</p>
+        </div>
+        <div class="col-lg-3">
+                <img src="assets/images.jpg" alt="" height="70" width="70" >
+            <p>voir les services disponible<br> et demandes</p>
+        </div>
+    </div>
+</div>
