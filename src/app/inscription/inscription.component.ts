@@ -27,7 +27,7 @@ export class InscriptionComponent implements OnInit {
     console.log(this.user)
     this.inscriptionService.addUser(this.user).subscribe(data=>{
       console.log('utilisateur creer');
-      this.inscriptionService.isConnect=true;
+      this.inscriptionService.isInscrit=true;
       this.router.navigate(['conexion'])
     });
   }

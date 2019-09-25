@@ -10,7 +10,7 @@ import { ConnexionServiceService } from './connexion-service.service';
 export class InscriptionService {
   baseUrl ='api/user';
   user:User=new User();
-  isConnect:boolean=false;
+  isInscrit:boolean=false;
   constructor(private http:HttpClient) { }
   
   addUser(user:User):Observable<any>{

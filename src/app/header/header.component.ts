@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InscriptionService } from '../inscription.service';
+import { ConnexionServiceService } from '../connexion-service.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public connexionService:ConnexionServiceService,public inscriptionService:InscriptionService) { }
 
   ngOnInit() {
   }

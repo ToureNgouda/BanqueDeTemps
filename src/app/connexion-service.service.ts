@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class ConnexionServiceService {
   baseUrl ='api/login';
   user:User=new User();
+  isConnect:boolean=false;
   constructor(private http:HttpClient) { }
    createConnetion(user:User):Observable<any>{
     return this.http.post(this.baseUrl,user);

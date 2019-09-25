@@ -27,7 +27,8 @@ export class ConexionComponent implements OnInit {
     console.log(this.user);
     this.connexionService.createConnetion(this.user).subscribe(
       data=>{
-        console.log('connexion reuissi ',data)
+        console.log('connexion reuissi ',data);
+        this.connexionService.isConnect=true;
         this.router.navigate(['accueil']);
     
       },err=>{
