@@ -3,6 +3,7 @@ import { FormGroup,  FormBuilder,  Validators, FormControl } from '@angular/form
 import { InscriptionService } from '../inscription.service';
 import { User } from '../model/user.model';
 import { Router } from '@angular/router';
+import { ToasterService } from 'angular2-toaster';
 
 
 @Component({
@@ -13,7 +14,11 @@ import { Router } from '@angular/router';
 export class InscriptionComponent implements OnInit {
   angForm:FormGroup;
   user:User=new User();
-  constructor(private fb: FormBuilder,private  inscriptionService:InscriptionService,public router:Router) { }
+  private toasterService: ToasterService;
+  constructor(private fb: FormBuilder,private  inscriptionService:InscriptionService, toasterService:ToasterService,
+    public router:Router) { 
+      this.toasterService = toasterService;
+    }
 
   ngOnInit() {
      this.angForm = this.fb.group({
@@ -28,7 +33,12 @@ export class InscriptionComponent implements OnInit {
     this.inscriptionService.addUser(this.user).subscribe(data=>{
       console.log('utilisateur creer');
       this.inscriptionService.isInscrit=true;
-      this.router.navigate(['conexion'])
+      this.router.navigate(['accueil']);
+      this.toasterService.pop('info','inscription réussi');
+    },err=>{
+       this.toasterService.pop('error','error coté serveur');
+       console.log("erreur cote serveur");
+       
     });
   }
 }

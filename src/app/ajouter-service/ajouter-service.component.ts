@@ -23,7 +23,13 @@ export class AjouterServiceComponent implements OnInit {
     });
   }
   addservice(ville, td, gr,fonction, nd, natureTemps) {
-    this.as.addservice(ville, td, gr, fonction, nd,natureTemps);
+    this.as.addservice(ville, td, gr, fonction, nd,natureTemps).subscribe(data=> {
+         console.log("service crée",data);
+         
+    },err=>{
+          console.log("erreur cote serveur",err);
+          
+    });
   }
 
 

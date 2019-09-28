@@ -15,6 +15,9 @@ import { HeaderComponent } from './header/header.component';
 import { ConexionComponent } from './conexion/conexion.component';
 import { InscriptionComponent } from './inscription/inscription.component';
 import {  HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToasterModule, ToasterService } from '../../node_modules/angular2-toaster';
+
 
 
 @NgModule({
@@ -30,12 +33,12 @@ import {  HttpClientModule } from '@angular/common/http';
     InscriptionComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,BrowserAnimationsModule,ToasterModule.forRoot(),
     AppRoutingModule,
     ReactiveFormsModule,HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ToasterService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
